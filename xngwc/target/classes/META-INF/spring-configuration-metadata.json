@@ -1,0 +1,10 @@
+{
+  "groups": [{
+    "name": "spring.datasource.primary",
+    "type": "javax.sql.DataSource",
+    "sourceType": "ycya.xngc.config.DataSourceConfig",
+    "sourceMethod": "primaryDataSource()"
+  }],
+  "properties": [],
+  "hints": []
+}

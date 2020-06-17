@@ -1,0 +1,50 @@
+2019-11-20 09:12:44.939  INFO 3488 --- [main] ycya.xngc.Application                    : Starting Application on PC-201706141637 with PID 3488 (E:\ycya_project_old\xngwc\target\classes started by Administrator in E:\ycya_project_old\xngwc)
+2019-11-20 09:12:44.942  INFO 3488 --- [main] ycya.xngc.Application                    : No active profile set, falling back to default profiles: default
+2019-11-20 09:12:45.358  INFO 3488 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6f4a47c7: startup date [Wed Nov 20 09:12:45 CST 2019]; root of context hierarchy
+2019-11-20 09:12:47.100  INFO 3488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$85101038] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 09:12:47.833  INFO 3488 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8090 (http)
+2019-11-20 09:12:47.859  INFO 3488 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2019-11-20 09:12:47.860  INFO 3488 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.5
+2019-11-20 09:12:48.100  INFO 3488 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/renbo]  : Initializing Spring embedded WebApplicationContext
+2019-11-20 09:12:48.100  INFO 3488 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2749 ms
+2019-11-20 09:12:48.236  INFO 3488 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-11-20 09:12:48.243  INFO 3488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-11-20 09:12:48.304  INFO 3488 --- [main] ycya.xngc.config.DataSourceConfig        : 数据库连接池创建中.......
+2019-11-20 09:12:48.615  INFO 3488 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2019-11-20 09:12:48.637  INFO 3488 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: primaryPersistenceUnit
+	...]
+2019-11-20 09:12:48.743  INFO 3488 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2019-11-20 09:12:48.745  INFO 3488 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-20 09:12:48.747  INFO 3488 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-11-20 09:12:48.804  INFO 3488 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-11-20 09:12:49.064  INFO 3488 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Started.
+2019-11-20 09:12:49.417  INFO 3488 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-11-20 09:12:49.656  WARN 3488 --- [main] o.h.b.i.SessionFactoryBuilderImpl        : Unrecognized hbm2ddl_auto value : update  .  Supported values include create, create-drop, update, and validate.  Ignoring
+2019-11-20 09:12:49.965  INFO 3488 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2019-11-20 09:12:50.417  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deptAdd]}" onto public ycya.xngc.bean.ErrorResponseEntity ycya.xngc.controller.DataInfoController.deptAdd(java.lang.String)
+2019-11-20 09:12:50.419  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deptMod]}" onto public ycya.xngc.bean.ErrorResponseEntity ycya.xngc.controller.DataInfoController.deptMod(java.lang.String)
+2019-11-20 09:12:50.419  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/baseDel]}" onto public ycya.xngc.bean.ErrorResponseEntity ycya.xngc.controller.DataInfoController.baseDel(java.lang.String,java.lang.String)
+2019-11-20 09:12:50.420  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userAdd]}" onto public ycya.xngc.bean.ErrorResponseEntity ycya.xngc.controller.DataInfoController.userAdd(java.lang.String)
+2019-11-20 09:12:50.420  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userUpdate]}" onto public ycya.xngc.bean.ErrorResponseEntity ycya.xngc.controller.DataInfoController.userUpdate(java.lang.String)
+2019-11-20 09:12:50.420  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/carAdd]}" onto public ycya.xngc.bean.ErrorResponseEntity ycya.xngc.controller.DataInfoController.carAdd(java.lang.String)
+2019-11-20 09:12:50.421  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/carUpdate]}" onto public ycya.xngc.bean.ErrorResponseEntity ycya.xngc.controller.DataInfoController.carUpdate(java.lang.String)
+2019-11-20 09:12:50.421  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/driverAdd]}" onto public ycya.xngc.bean.ErrorResponseEntity ycya.xngc.controller.DataInfoController.driverAdd(java.lang.String)
+2019-11-20 09:12:50.421  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/driverUpdate]}" onto public ycya.xngc.bean.ErrorResponseEntity ycya.xngc.controller.DataInfoController.driverUpdate(java.lang.String)
+2019-11-20 09:12:50.422  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/termAdd]}" onto public ycya.xngc.bean.ErrorResponseEntity ycya.xngc.controller.DataInfoController.termAdd(java.lang.String)
+2019-11-20 09:12:50.423  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/termUpdate]}" onto public ycya.xngc.bean.ErrorResponseEntity ycya.xngc.controller.DataInfoController.termUpdate(java.lang.String)
+2019-11-20 09:12:50.423  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orderAdd]}" onto public ycya.xngc.bean.ErrorResponseEntity ycya.xngc.controller.DataInfoController.orderAdd(java.lang.String)
+2019-11-20 09:12:50.426  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello1]}" onto public java.util.List<ycya.xngc.bean.Dept> ycya.xngc.controller.HelloWorldController.hello1(java.lang.Integer)
+2019-11-20 09:12:50.427  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello2]}" onto public java.util.List<java.lang.String> ycya.xngc.controller.HelloWorldController.hello2()
+2019-11-20 09:12:50.427  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getall],methods=[GET]}" onto public java.util.List<ycya.xngc.bean.Dept> ycya.xngc.controller.HelloWorldController.girlList()
+2019-11-20 09:12:50.427  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/delete],methods=[POST]}" onto public void ycya.xngc.controller.HelloWorldController.weekdaylDelete(java.lang.Integer)
+2019-11-20 09:12:50.431  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-11-20 09:12:50.432  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-11-20 09:12:50.501  INFO 3488 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6f4a47c7: startup date [Wed Nov 20 09:12:45 CST 2019]; root of context hierarchy
+2019-11-20 09:12:50.566  INFO 3488 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2019-11-20 09:12:51.141  WARN 3488 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-11-20 09:12:51.358  INFO 3488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-11-20 09:12:51.360  INFO 3488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2019-11-20 09:12:51.365  INFO 3488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'primaryDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=primaryDataSource,type=HikariDataSource]
+2019-11-20 09:12:51.466  INFO 3488 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8090 (http)
+2019-11-20 09:12:51.507  INFO 3488 --- [main] ycya.xngc.Application                    : Started Application in 6.997 seconds (JVM running for 7.399)

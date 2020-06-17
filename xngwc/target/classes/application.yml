@@ -1,0 +1,28 @@
+logging:
+  #日志存储地址
+  #file: "logs/config/demo-xx.log"
+  config: classpath:log/logback.xml
+info:
+  name : "入门案例"
+
+server:
+  #端口号
+  port: 8888
+  #项目名，如果不设定，默认是 /
+  context-path: /zyz
+  
+
+spring:
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis服务器连接端口
+    port: 6379
+#     Redis服务器连接密码（默认为空）
+#    password: 123456
+  
+ 
+
+ 

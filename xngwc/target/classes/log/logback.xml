@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration scan="true">
+    <property resource="log/logback.properties" />
+    <!-- 控制台日志配置 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+      <encoder>
+            <!-- 格式化 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%p] [%t] %c{36} - %m%n</pattern>
+        </encoder>
+    </appender>
+ <!-- 正常文件输出设置 -->
+    <appender name="FILE_INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logback.path}/ko.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/${APP_NAME}/${APP_NAME}-%d{yyyy-MM-dd}-%i.zip
+            </FileNamePattern>
+            <maxFileSize>50MB</maxFileSize>
+            <maxHistory>365</maxHistory>
+            <totalSizeCap>20GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} -
+                %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- 自定义日志 -->
+    <appender name="baitiaoUserAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logback.path}/sign.log</File>
+        <!-- <File>logs/config/demo-xx.log</File> -->
+        <append>true</append>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${logback.zip.path}/%d{yyyy-MM-dd}/info222-%i.zip</fileNamePattern>
+            <!-- 单个日志大小 -->
+            <maxFileSize>${logback.maxFileSize}</maxFileSize>
+            <!-- 日志保存周期 -->
+            <maxHistory>${logback.maxHistory}</maxHistory>
+            <!-- 总大小 -->
+            <totalSizeCap>${logback.totalSizeCap}</totalSizeCap>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] %level [%thread] %file:%line - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>    
+    <!-- 不同的业务逻辑日志打印到指定文件夹-->
+    <logger name="baitiaoUser" additivity="false" level="INFO">
+        <appender-ref ref="baitiaoUserAppender"/>
+    </logger>
+     <!-- <logger name="ycya.xngc.controller" level="INFO"/> -->
+
+
+    <root level="${logback.level}">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE_INFO" /> 
+    </root>
+</configuration>
